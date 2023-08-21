@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Yourmom" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">#03A9F4</item>
+    </style>
+
+    <style name="Theme.Yourmom" parent="Base.Theme.Yourmom" />
+</resources>
