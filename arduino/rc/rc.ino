@@ -42,38 +42,38 @@ void setup() {
   pinMode(IN6, OUTPUT);
 }
 void loop() {
-  bt();
+  // bt();
   move();
 }
 
 void move() {
-  if (isFront == true) {
-    digitalWrite(IN1, HIGH);
-    digitalWrite(IN2, LOW);
-    analogWrite(SPEED1, 255);
+  
+  // if (isFront == true) {
+  //   digitalWrite(IN1, HIGH);
+  //   digitalWrite(IN2, LOW);
+  //   analogWrite(SPEED1, 255);
 
-    digitalWrite(IN3, HIGH);
-    digitalWrite(IN4, LOW);
-    analogWrite(SPEED2, 255);
+  //   digitalWrite(IN3, HIGH);
+  //   digitalWrite(IN4, LOW);
+  //   analogWrite(SPEED2, 255);
 
-    digitalWrite(IN5, HIGH);
-    digitalWrite(IN6, LOW);
-    analogWrite(SPEED3, 255);
-  } else {
-    Serial.println("false!");
-    digitalWrite(IN1, LOW);
-    digitalWrite(IN2, LOW);
-    analogWrite(SPEED1, 0); 
+  //   digitalWrite(IN5, HIGH);
+  //   digitalWrite(IN6, LOW);
+  //   analogWrite(SPEED3, 255);
+  // } else {
+  //   Serial.println("false!");
+  //   digitalWrite(IN1, LOW);
+  //   digitalWrite(IN2, LOW);
+  //   analogWrite(SPEED1, 0); 
 
-    digitalWrite(IN3, LOW);
-    digitalWrite(IN4, LOW);
-    analogWrite(SPEED2, 0);
+  //   digitalWrite(IN3, LOW);
+  //   digitalWrite(IN4, LOW);
+  //   analogWrite(SPEED2, 0);
 
-    digitalWrite(IN5, LOW);
-    digitalWrite(IN6, LOW);
-    analogWrite(SPEED3, 0);
-
-  }
+  //   digitalWrite(IN5, LOW);
+  //   digitalWrite(IN6, LOW);
+  //   analogWrite(SPEED3, 0);
+  // }
 }
 
 void bt() {

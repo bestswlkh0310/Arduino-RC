@@ -9,10 +9,12 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.bestswlkh0310.rc.databinding.ActivityMainBinding
@@ -32,11 +34,15 @@ class MainActivity : AppCompatActivity() {
     private var btSocket: BluetoothSocket? = null
     private var connectedThread: ConnectedThread? = null
 
+    @RequiresApi(Build.VERSION_CODES.S)
     private val permissionList = arrayOf(
         Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.ACCESS_COARSE_LOCATION
+        Manifest.permission.ACCESS_COARSE_LOCATION,
+        Manifest.permission.BLUETOOTH_SCAN,
+        Manifest.permission.BLUETOOTH_CONNECT,
     )
 
+    @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
